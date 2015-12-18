@@ -1,7 +1,4 @@
-Copyright (c) 2015 Michael Kelly.
-
-bin/build-package.sh and CI configurations were taken from
-https://github.com/atom/ci and are Copyright (c) 2015 GitHub Inc.
+Copyright (c) 2015 Ramkumar Ramachandra.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

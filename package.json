@@ -2,7 +2,7 @@
   "name": "advanced-filter-file",
   "version": "0.1.0",
   "main": "./lib/advanced-filter-file",
-  "description": "Open and create files and directories easily. Type in a path (with autocomplete) and view directory contents.",
+  "description": "Find files and filter through the list",
   "activationCommands": {
     "atom-workspace": [
       "advanced-filter-file:toggle"

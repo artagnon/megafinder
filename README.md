@@ -1,14 +1,14 @@
 # Advanced Filter File
 
-[![TravisCI Build Status](https://travis-ci.org/Osmose/advanced-open-file.svg)](https://travis-ci.org/Osmose/advanced-open-file)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/cwyb7f46dd1bbuxh/branch/master?svg=true)](https://ci.appveyor.com/project/Osmose/advanced-open-file/branch/master)
+[![TravisCI Build Status](https://travis-ci.org/Osmose/advanced-filter-file.svg)](https://travis-ci.org/Osmose/advanced-filter-file)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/cwyb7f46dd1bbuxh/branch/master?svg=true)](https://ci.appveyor.com/project/Osmose/advanced-filter-file/branch/master)
 
 
 
 Advanced Filter File is a package for helping Atom users to open files and folders
 easily. It can also create new files and folders if they don't exist.
 
-![Demo of plugin functionality](http://osmose.github.io/advanced-open-file/demo.gif)
+![Demo of plugin functionality](http://osmose.github.io/advanced-filter-file/demo.gif)
 
 Advanced Filter File is fork of
 [Advanced New File](https://github.com/Trudko/advanced-new-file), itself a fork
@@ -45,7 +45,7 @@ autocompletion or directory shortcuts.
 Available commands for binding:
 
 <dl>
-  <dt><code>advanced-open-file:toggle</code></dt>
+  <dt><code>advanced-filter-file:toggle</code></dt>
   <dd>Toggles the Advanced Filter File dialog.</dd>
 
   <dt><code>core:confirm</code></dt>
@@ -54,7 +54,7 @@ Available commands for binding:
     selected, open the current path in the input.
   </dd>
 
-  <dt><code>advanced-open-file:confirm-selected-or-first</code></dt>
+  <dt><code>advanced-filter-file:confirm-selected-or-first</code></dt>
   <dd>
     Similar to <code>core:confirm</code>. If nothing is selected, select the
     first item in the list.
@@ -69,19 +69,19 @@ Available commands for binding:
     directory.
   </dd>
 
-  <dt><code>advanced-open-file:autocomplete</code></dt>
+  <dt><code>advanced-filter-file:autocomplete</code></dt>
   <dd>Attempts to autocomplete the current input.</dd>
 
-  <dt><code>advanced-open-file:undo</code></dt>
+  <dt><code>advanced-filter-file:undo</code></dt>
   <dd>Undo changes to the current path.</dd>
 
-  <dt><code>advanced-open-file:move-cursor-up</code></dt>
+  <dt><code>advanced-filter-file:move-cursor-up</code></dt>
   <dd>Move the cursor/highlight for the currently selected file up.</dd>
 
-  <dt><code>advanced-open-file:move-cursor-down</code></dt>
+  <dt><code>advanced-filter-file:move-cursor-down</code></dt>
   <dd>Move the cursor/highlight for the currently selected file down.</dd>
 
-  <dt><code>advanced-open-file:delete-path-component</code></dt>
+  <dt><code>advanced-filter-file:delete-path-component</code></dt>
   <dd>
     A more powerful version of <code>alt-backspace</code> that erases the a
     directory component in the miniEditor including the slash ('/').
@@ -92,9 +92,9 @@ The following extra keybindings are included by default:
 
 Action                                     | Extra Keys
 ------------------------------------------ | ------------------
-`advanced-open-file:move-cursor-up`        | `Ctrl-p`, `Ctrl-i`
-`advanced-open-file:move-cursor-down`      | `Ctrl-n`, `Ctrl-k`
-`advanced-open-file:delete-path-component` | `Ctrl-l`
+`advanced-filter-file:move-cursor-up`        | `Ctrl-p`, `Ctrl-i`
+`advanced-filter-file:move-cursor-down`      | `Ctrl-n`, `Ctrl-k`
+`advanced-filter-file:delete-path-component` | `Ctrl-l`
 
 You can of course remap the keys however you wish. For example, add the
 following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
@@ -102,10 +102,10 @@ following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
 
 ```cson
 'atom-workspace':
-  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+  'ctrl-x ctrl-f': 'advanced-filter-file:toggle'
 
-'.advanced-open-file atom-text-editor':
-  'ctrl-j': 'advanced-open-file:move-cursor-down'
+'.advanced-filter-file atom-text-editor':
+  'ctrl-j': 'advanced-filter-file:move-cursor-down'
 ```
 
 ## Settings
@@ -158,14 +158,14 @@ following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
 ## Event Service
 
 Other packages can subscribe to events to get notified when certain actions
-happen in advanced-open-file. To do so, you'll need to consume the
-`advanced-open-file-events` service:
+happen in advanced-filter-file. To do so, you'll need to consume the
+`advanced-filter-file-events` service:
 
 ### `package.json`
 
 ```json
 "consumedServices": {
-  "advanced-open-file-events": {
+  "advanced-filter-file-events": {
     "versions": {
       "0.1.0": "consumeEventService"
     }
@@ -194,7 +194,7 @@ module.exports =
 
 ### `onDidOpenPath`
 
-Triggered when a file is opened via advanced-open-file.
+Triggered when a file is opened via advanced-filter-file.
 
 ```coffeescript
 service.onDidOpenPath (path) ->
@@ -203,7 +203,7 @@ service.onDidOpenPath (path) ->
 
 ### `onDidCreatePath`
 
-Triggered when a file is created via advanced-open-file. Note that this is only
+Triggered when a file is created via advanced-filter-file. Note that this is only
 triggered when the "Create files instantly" preference is enabled. It does not
 trigger when the preference is disabled and a new file is opened and then
 subsequently saved.
@@ -223,14 +223,14 @@ or the new feature you want added. If you're interested in implementing the fix
 for your request yourself, or fixing an issue submitted by someone else, read
 on.
 
-[file an issue]: https://github.com/Osmose/advanced-open-file/issues/new
+[file an issue]: https://github.com/Osmose/advanced-filter-file/issues/new
 
 ### Developer Setup
 
 Setting up a development install is easy with [apm][]:
 
 ```sh
-$ apm develop advanced-open-file /path/to/checkout
+$ apm develop advanced-filter-file /path/to/checkout
 ```
 
 The command above will use Git to clone Advanced Filter File to the
