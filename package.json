@@ -3,31 +3,6 @@
   "version": "0.1.0",
   "main": "./lib/advanced-filter-file",
   "description": "Find files and filter through the list",
-  "activationCommands": {
-    "atom-workspace": [
-      "advanced-filter-file:toggle"
-    ]
-  },
-  "providedServices": {
-    "advanced-filter-file-events": {
-      "description": "Listen to events triggered when users open or create paths using advanced-filter-file.",
-      "versions": {
-        "0.1.0": "provideEventService"
-      }
-    }
-  },
-  "keywords": [
-    "atom",
-    "open",
-    "file",
-    "create",
-    "new"
-  ],
-  "repository": "https://github.com/artagnon/advanced-filter-file",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=0.175.0"
-  },
   "dependencies": {
     "event-kit": "^1.3.0",
     "fuzzaldrin": "^2.1.0",
