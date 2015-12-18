@@ -1,0 +1,36 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-workspace':
+  'cmd-p': 'advanced-filter-file:toggle'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+  'ctrl-alt-p': 'advanced-filter-file:toggle'
+
+'.advanced-filter-file atom-text-editor':
+  'tab': 'advanced-filter-file:autocomplete'
+  'up': 'advanced-filter-file:move-cursor-up'
+  'down': 'advanced-filter-file:move-cursor-down'
+
+  # Emacs-style movement
+  'ctrl-p': 'advanced-filter-file:move-cursor-up'
+  'ctrl-n': 'advanced-filter-file:move-cursor-down'
+
+  # Alternative movement keys
+  'ctrl-i': 'advanced-filter-file:move-cursor-up'
+  'ctrl-k': 'advanced-filter-file:move-cursor-down'
+
+  # A more powerful version of alt-backspace
+  'ctrl-l': 'advanced-filter-file:delete-path-component'
+
+'.platform-darwin .advanced-filter-file atom-text-editor':
+  'cmd-z': 'advanced-filter-file:undo'
+
+'.platform-win32 .advanced-filter-file atom-text-editor, .platform-linux .advanced-filter-file atom-text-editor':
+  'ctrl-z': 'advanced-filter-file:undo'
