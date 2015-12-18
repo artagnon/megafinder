@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "./lib/advanced-filter-file",
   "description": "Find files and filter through the list",
+  "repository": "https://github.com/artagnon/advanced-filter-file",
   "dependencies": {
     "event-kit": "^1.3.0",
     "fuzzaldrin": "^2.1.0",

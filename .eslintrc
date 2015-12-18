@@ -13,7 +13,6 @@
         "camelcase": 0,
         "no-use-before-define": 0,
         "handle-callback-err": 0,
-        "no-underscore-dangle": 0,
-        "no-unused-vars": [2, {"vars": "all", "args": "after-used"}]
+        "no-underscore-dangle": 0
     }
 }
