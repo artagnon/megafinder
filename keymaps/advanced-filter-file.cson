@@ -14,6 +14,7 @@
   'ctrl-alt-p': 'advanced-filter-file:toggle'
 
 '.advanced-filter-file atom-text-editor':
+  'enter': 'advanced-filter-file:confirm-selected-or-first'
   'tab': 'advanced-filter-file:autocomplete'
   'up': 'advanced-filter-file:move-cursor-up'
   'down': 'advanced-filter-file:move-cursor-down'
