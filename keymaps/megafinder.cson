@@ -1,0 +1,37 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-workspace':
+  'cmd-p': 'megafinder:toggle'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+  'ctrl-alt-p': 'megafinder:toggle'
+
+'.megafinder atom-text-editor':
+  'enter': 'megafinder:confirm-selected-or-first'
+  'tab': 'megafinder:autocomplete'
+  'up': 'megafinder:move-cursor-up'
+  'down': 'megafinder:move-cursor-down'
+
+  # Emacs-style movement
+  'ctrl-p': 'megafinder:move-cursor-up'
+  'ctrl-n': 'megafinder:move-cursor-down'
+
+  # Alternative movement keys
+  'ctrl-i': 'megafinder:move-cursor-up'
+  'ctrl-k': 'megafinder:move-cursor-down'
+
+  # A more powerful version of alt-backspace
+  'ctrl-l': 'megafinder:delete-path-component'
+
+'.platform-darwin .megafinder atom-text-editor':
+  'cmd-z': 'megafinder:undo'
+
+'.platform-win32 .megafinder atom-text-editor, .platform-linux .advanced-filter-file atom-text-editor':
+  'ctrl-z': 'megafinder:undo'
