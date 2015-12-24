@@ -1,11 +1,11 @@
-# Advanced Filter File
+# Megafinder
 
 This is a fork of advanced-open-file that is meant to be a
 <kbd>Cmd</kbd>+<kbd>P</kbd> replacement for enormous repositories. Although it
 works on any project with a project root, it has been tailored to work with
 sandboxes at The MathWorks.
 
-It works by running `find` and invoking `fuzzaldrinPlus` on the result.
+It works by running `find` and invoking `fuzzaldrin` on the result.
 
 ## Usage
 
