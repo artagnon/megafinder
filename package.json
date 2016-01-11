@@ -1,6 +1,6 @@
 {
   "name": "megafinder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./lib/megafinder",
   "description": "Find files and filter through the list",
   "repository": "https://github.com/artagnon/megafinder",
